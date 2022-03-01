@@ -1,0 +1,138 @@
+@import "variables";
+@import "globals";
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    max-width: 69.375rem;
+    margin: auto;
+    background-color: $darkDesaturatedBlue;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+.text {
+    padding: 4.5rem 6.75rem 3.8125rem 4.5rem;
+
+    h1 {
+        margin: 0;
+        margin-bottom: 1.625rem;
+        font-size: 2.25rem;
+        font-weight: 700;
+    }
+
+    span {
+        color: $softViolet;
+    }
+
+    p {
+        margin: 0;
+        margin-bottom: 4.5rem;
+        padding-right: 1.25rem;
+        line-height: 1.65;
+        color: $transWhiteHeadings;
+    }
+}
+
+.statistics {
+    display: flex;
+    padding-right: 1.25rem;
+    justify-content: space-between;
+    
+    h2, p {
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    p {
+        margin-top: 0.25rem;
+        color: $transWhiteHeadings;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 0.8125rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+.image {
+    background-color: $softViolet;
+}
+
+.desktopImage {
+    display: block;
+    max-width: 33.75rem;
+    height: 100%;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+}
+
+.mobileImage {
+    max-height: 15rem;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    display: none;
+}
+
+@media (max-width: 72em) {
+
+    section {
+        flex-direction: column-reverse;
+        max-width: 20.4375rem;
+        text-align: center;
+    }
+
+    .text {
+        padding: 2.25rem 1.8125rem 2.1875rem 1.8125rem;
+
+        h1 {
+            font-size: 1.75rem;
+            letter-spacing: 0px;
+            margin-bottom: 0.9375rem;
+        }
+
+        p {
+            padding: 0;
+            margin-bottom: 0.9375rem;
+            font-size: 0.9375rem;
+            letter-spacing: 0px;
+        }
+    }
+
+    .statistics {
+        flex-direction: column;
+        padding: 0;
+
+        .stat {
+            margin-top: 1.6875rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    .desktopImage {
+        display: none;
+    }
+
+    .mobileImage {
+        display: block;
+    }
+}
