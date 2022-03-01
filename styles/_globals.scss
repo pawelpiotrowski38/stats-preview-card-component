@@ -1,0 +1,23 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-size: 0.9375rem;
+    font-family: 'Inter', sans-serif;
+    font-stretch: 50%;
+    font-weight: 400;
+    background-color: $veryDarkBlue;
+    color: $white;
+}
+
